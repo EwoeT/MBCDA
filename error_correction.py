@@ -13,7 +13,7 @@ class gen_text():
         self.bart_tokenizer = AutoTokenizer.from_pretrained(self.bart_pretrained_version)
         self.bart_model = BartForConditionalGeneration.from_pretrained("facebook/bart-base").to("cuda")
         # self.bart_model = torch.load("train_infiller_normalizer/epoch_2.pth")
-        self.normalizer_model = torch.load("clean_normalizer_model1.pth")
+        self.normalizer_model = torch.load("clean_normalizer_model.pth")
         self.vocabsss = self.tokenizer.get_vocab()
         self.vocabs = dict((v,k) for k,v in self.vocabsss.items())
 
