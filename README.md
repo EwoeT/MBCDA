@@ -11,11 +11,14 @@ csv file with original text and dictionary-based counterfactual text
 
 # Train model
 !python mbcda.py -m "facebook/bart-large-cnn" -d "filtered_prepped_wiki_6.csv" -t "text" -l "flipped_text" -s 0.9 -c "cuda" -mode "train"
+
 -t input text column name
+
 -l dictionary based counterfactual column name
 
 # Generate_text
 !python mbcda.py -m "facebook/bart-large-cnn" -d "filtered_prepped_wiki_6.csv" -t "text" -c "cuda" -mode "generate"
+
 -t input text column name
 
 # Pretrained model
