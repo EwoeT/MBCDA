@@ -21,4 +21,4 @@ csv file with original text and dictionary-based counterfactual text
 -t input text column name
 
 # Pretrained model
-soon to be uploaded
+Pretrained model to be uploaded by Nov. 27
