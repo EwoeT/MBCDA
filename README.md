@@ -4,7 +4,6 @@
 # Requirements
 1. torch 2.0.1
 2. transformers-4.35.0
-3. download the [normalization model](https://drive.google.com/file/d/1XTs9g-BH1Oid8naD8zv1B0qFbgj5pjbV/view?usp=drive_link): For case, punctuation and space correction
 
 # Dataset
 csv file with original text and dictionary-based counterfactual text
