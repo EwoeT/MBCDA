@@ -21,7 +21,7 @@ csv file with original text and dictionary-based counterfactual text
 -t input text column name
 
 # Pretrained model
-[Pretrained MBCDA model](https://drive.google.com/drive/folders/1nG7Hr0GJCa-NDEIMtpv3DpffUuCbK3p0?usp=drive_link)
+[Pretrained MBCDA model]()
 
 from transformers import BartForConditionalGeneration
 
