@@ -21,4 +21,6 @@ csv file with original text and dictionary-based counterfactual text
 -t input text column name
 
 # Pretrained model
-Pretrained model to be uploaded by Nov. 27
+[Pretrained MBCDA model](https://drive.google.com/drive/folders/1nG7Hr0GJCa-NDEIMtpv3DpffUuCbK3p0?usp=drive_link)
+from transformers import BartForConditionalGeneration
+model = BartForConditionalGeneration.from_pretrained("MBCDA_pretrained_model_path")
