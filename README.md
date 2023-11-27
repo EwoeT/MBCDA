@@ -26,3 +26,5 @@ csv file with original text and dictionary-based counterfactual text
 from transformers import BartForConditionalGeneration
 
 model = BartForConditionalGeneration.from_pretrained("MBCDA_pretrained_model_path")
+
+CF_ids = model.generate(input_ids, num_beams=3, do_sample=False, min_length=0, max_length=300)
