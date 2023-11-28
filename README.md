@@ -25,7 +25,9 @@ csv file with original text and dictionary-based counterfactual text
 [Pretrained MBCDA model](https://drive.google.com/drive/folders/1nG7Hr0GJCa-NDEIMtpv3DpffUuCbK3p0?usp=drive_link)
 
 ## txt file input
+```python
 !python generate_mbcda.py -m "facebook/bart-base" -data_path "path_to_txt_file" -model_path "MBCDA_pretrained_model" -mode "generate" -device "cuda"
+```
 
 ## Text list input
 ```python
