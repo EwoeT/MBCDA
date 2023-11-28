@@ -31,10 +31,11 @@ csv file with original text and dictionary-based counterfactual text
 
 ## Text list input
 ```python
+device = "cuda"
 from transformers import AutoTokenizer, BartForConditionalGeneration
-model = BartForConditionalGeneration.from_pretrained("MBCDA_pretrained_model").eval()
+model = BartForConditionalGeneration.from_pretrained("MBCDA_pretrained_model").to(device).eval()
 tokenizer = AutoTokenizer.from_pretrained("facebook/bart-base")
-inputs = tokenizer.batch_encode_plus(input_batchh, truncation=True, max_length=300, return_tensors="pt", padding=True).to("cuda")
+inputs = tokenizer.batch_encode_plus(input_batchh, truncation=True, max_length=300, return_tensors="pt", padding=True).to(device)
 input_ids = inputs["input_ids"]
 summary_ids = model.generate(input_ids, num_beams=8, do_sample=False, min_length=0, max_length=200)
 output_text = tokenizer.batch_decode(summary_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)
