@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import torch
 from transformers import AutoTokenizer, BartConfig, BertTokenizer, BertForSequenceClassification, BartTokenizer
-# from BART_dual_obj import BartForConditionalGeneration
-from transformers import BartForConditionalGeneration
+from BART_dual_obj import BartForConditionalGeneration
+# from transformers import BartForConditionalGeneration
 from torch.nn import BCEWithLogitsLoss, CrossEntropyLoss
 from transformers.optimization import get_linear_schedule_with_warmup
 from torch.utils.data import TensorDataset
