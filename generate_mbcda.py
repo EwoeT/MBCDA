@@ -79,7 +79,7 @@ if __name__ == '__main__':
                 with torch.no_grad():
                     inputs = tokenizer.batch_encode_plus(input_batchh, truncation=True, max_length=300, return_tensors="pt", padding=True)
                     input_ids = inputs["input_ids"].to(device)
-                    summary_ids = model.generate(input_ids, num_beams=10, do_sample=False, min_length=0, max_length=300)
+                    summary_ids = model.generate(input_ids, num_beams=num_beams, do_sample=False, min_length=0, max_length=300)
                     output_text = tokenizer.batch_decode(summary_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)
                     if key1<1:
                         print(output_text)
