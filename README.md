@@ -27,6 +27,7 @@ csv file with original text and dictionary-based counterfactual text
 ## txt file input
 ```python
 !python generate_mbcda.py -m "facebook/bart-base" -data_path "../data/bias_in_bios_original" -model_path "pretrained_MBCDA_epoch_1" -num_beams 10 -mode "generate" -device "cuda"```
+```
 
 ## Text list input
 ```python
