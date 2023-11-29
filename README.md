@@ -33,7 +33,7 @@ download [Pretrained MBCDA model](https://drive.google.com/drive/folders/1nG7Hr0
 !python generate_mbcda.py -m "facebook/bart-base" -data_path "../data/bias_in_bios_original" -model_path "pretrained_MBCDA_epoch_1" -num_beams 10 -mode "generate" -device "cuda"```
 ```
 
-### Text list input
+### sentence list input
 ```python
 device = "cuda"
 from transformers import AutoTokenizer, BartForConditionalGeneration
