@@ -16,20 +16,24 @@ csv file with original text and dictionary-based counterfactual text
 
 -l dictionary-based counterfactual column name -- dictionary-based counterfactuals from eg. [Maudslay et al. 2019](https://github.com/rowanhm/counterfactual-data-substitution/tree/master)
 ```
+<!---
 # Generate_text
 ```python
 !python generate_mbcda.py -m "facebook/bart-base" -data_path "../data/bias_in_bios_original" -model_path "pretrained_MBCDA_epoch_1" -mode "generate" -device "cuda"
 ```
+-->
 # Pretrained model
 
-[Pretrained MBCDA model](https://drive.google.com/drive/folders/1nG7Hr0GJCa-NDEIMtpv3DpffUuCbK3p0?usp=drive_link)
+download [Pretrained MBCDA model](https://drive.google.com/drive/folders/1nG7Hr0GJCa-NDEIMtpv3DpffUuCbK3p0?usp=drive_link)
 
-## txt file input
+## Generate_text
+
+### txt file input
 ```python
 !python generate_mbcda.py -m "facebook/bart-base" -data_path "../data/bias_in_bios_original" -model_path "pretrained_MBCDA_epoch_1" -num_beams 10 -mode "generate" -device "cuda"```
 ```
 
-## Text list input
+### Text list input
 ```python
 device = "cuda"
 from transformers import AutoTokenizer, BartForConditionalGeneration
