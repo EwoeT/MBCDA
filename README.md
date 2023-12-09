@@ -30,7 +30,7 @@ Download [Pretrained MBCDA model](https://drive.google.com/drive/folders/1nG7Hr0
 
 ### txt file input
 ```python
-!python generate_mbcda.py -m "facebook/bart-base" -data_path "path_to_data_file" -model_path "pretrained_MBCDA_epoch" -num_beams 10 -mode "generate" -device "cuda"```
+!python generate_mbcda.py -m "facebook/bart-base" -data_path "path_to_data_file" -model_path "pretrained_MBCDA_model" -num_beams 10 -mode "generate" -device "cuda"```
 ```
 
 ### sentence list input
