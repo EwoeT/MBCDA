@@ -173,7 +173,7 @@ class adv_model_train():
                 b_labels = batch[1].to(device)
                 b_labels_2 = batch[2].to(device)
                 self.model_F.zero_grad()
-                outputsF = self.model_F(input_ids=b_real_input_ids, labels=b_labels, output_hidden_states=True)
+                outputsF = self.model_F(input_ids=b_real_input_ids, labels=b_labels, labels_2=b_labels_2, output_hidden_states=True)
                 errF = outputsF.loss
                 errF.backward()
                 torch.nn.utils.clip_grad_norm_(self.model_F.parameters(), 1.0)
